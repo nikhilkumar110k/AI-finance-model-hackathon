@@ -1,0 +1,184 @@
+:root {
+  --primary: #1f2937;
+  --secondary: #c3c3c316;
+  --red: rgb(255 142 142);
+  --green: #65ff65;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary);
+  font-family: "Poppins";
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary);
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+.back {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 0 0;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: start;
+  justify-content: center;
+  width: 80vw;
+  margin: 4rem auto;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.back p {
+  margin: 0 auto;
+}
+
+.back img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.analyze > .card {
+  transform: rotateY(180deg);
+}
+
+.card-container {
+  width: 20rem;
+  height: 22rem;
+  max-width: 80vw;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.card {
+  background-color: var(--secondary);
+  color: white;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.front .ticker {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.front button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info {
+  padding: 1rem;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  border-radius: 0.25rem;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info > .green {
+  color: var(--green);
+}
+
+.info > .red {
+  color: var(--red);
+}
+
+.x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 999px;
+  color: rgb(243, 93, 93);
+  cursor: pointer;
+}
+
+.searchInput {
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  width: calc(100% - 2rem);
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  background-color: transparent;
+}
+
+.searchBar {
+  justify-content: space-between;
+  background-color: var(--secondary);
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  width: 80vw;
+  margin: 4rem auto;
+  max-width: 600px;
+  align-items: center;
+}
+
+.searchIcon {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
